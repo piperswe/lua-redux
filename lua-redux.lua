@@ -33,7 +33,7 @@ local function createStore(reducer, preloadedState)
     return self.state
   end
   function store:replaceReducer(reducer)
-    self.reducer = reducer;
+    self.reducer = reducer
     self:dispatch({
       type = ActionTypes.INIT
     })
@@ -47,6 +47,6 @@ local function createStore(reducer, preloadedState)
 end
 
 return {
-  ActionTypes = ActionTypes;
-  createStore = createStore;
+  ActionTypes = ActionTypes,
+  createStore = createStore
 }
