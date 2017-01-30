@@ -17,8 +17,6 @@ local function createStore(reducer, preloadedState)
     subscribers = {}
   }
 
-  print(store.reducer)
-
   function store:subscribe(callback)
     local i = table.insert(self.subscribers, callback)
     return function()
